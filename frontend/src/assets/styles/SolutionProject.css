@@ -1,0 +1,12 @@
+.solution{
+    margin: 2rem;
+    
+}
+.sol-text{
+    margin: 2rem 5rem ;
+    max-width: 82rem;
+    resize: none;   
+}
+.solution h1{
+    margin-left: 2rem;
+}

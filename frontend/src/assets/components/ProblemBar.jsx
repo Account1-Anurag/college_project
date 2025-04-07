@@ -11,7 +11,6 @@ export const ProblemBar = () => {
       navigate("description/1")
   }
   function handleClick2(){
-    <SuggestionPopup />
     // navigate("suggest")
 }
 function handleClick3(){
