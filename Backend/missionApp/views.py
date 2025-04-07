@@ -10,15 +10,15 @@ from rest_framework import generics
 class RawProblemViewSet(viewsets.ModelViewSet):
     queryset = RawProblem.objects.all()
     serializer_class = RawProblemSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
-        serializer.save(submitted_by=self.request.user)
+        serializer.save()
 
 class SolutionViewSet(viewsets.ModelViewSet):
     queryset = Solution.objects.all()
     serializer_class = SolutionSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
     def perform_create(self, serializer):
         serializer.save(submitted_by=self.request.user)
@@ -26,18 +26,18 @@ class SolutionViewSet(viewsets.ModelViewSet):
 class ProjectViewSet(viewsets.ModelViewSet):
     queryset = Project.objects.all()
     serializer_class = ProjectSerializer
-    permission_classes = [permissions.IsAuthenticated]
+    # permission_classes = [permissions.IsAuthenticated]
 
 class VerifiedProblemListView(generics.ListAPIView):
     queryset = VerifiedProblem.objects.all()
     serializer_class = VerifiedProblemSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
 
 # 2. Get verified solutions for a specific problem
 class VerifiedSolutionListByProblemView(generics.ListAPIView):
     serializer_class = SolutionSerializer
-    permission_classes = [IsAuthenticated]
+    # permission_classes = [IsAuthenticated]
 
     def get_queryset(self):
         problem_id = self.kwargs['problem_id']
