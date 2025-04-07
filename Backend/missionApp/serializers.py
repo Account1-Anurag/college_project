@@ -7,11 +7,11 @@ class UserSerializer(serializers.ModelSerializer):
         fields = ['id', 'username', 'email', 'role', 'year', 'roll_number']
 
 class RawProblemSerializer(serializers.ModelSerializer):
-    submitted_by = UserSerializer(read_only=True)
+    # submitted_by = UserSerializer(read_only=True)
 
     class Meta:
         model = RawProblem
-        fields = ['id', 'title', 'description', 'submitted_by', 'submitted_on']
+        fields = ['id', 'title', 'description','submitted_by', 'submitted_on']
 
 class VerifiedProblemSerializer(serializers.ModelSerializer):
     raw_problem = RawProblemSerializer(read_only=True)

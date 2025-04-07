@@ -17,7 +17,7 @@ class CustomUser(AbstractUser):
 class RawProblem(models.Model):
     title = models.CharField(max_length=200)
     description = models.TextField()
-    submitted_by = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    submitted_by = models.CharField(max_length=200,null=True)
     submitted_on = models.DateTimeField(auto_now_add=True)
 
 class VerifiedProblem(models.Model):
