@@ -5,30 +5,22 @@ import { SuggestionPopup } from '../components/SuggestionPopup';
 import { Upload } from "lucide-react";
 import { UploadPopup } from "./UploadPopup";
 
-export const ProblemBar = () => {
+export const ProblemBar = ({ problem }) => {
   const navigate = useNavigate();
   const [showPopup, setShowPopup] = useState(false);
   const [showSol, setShowSol] = useState(false);
 
-  function handleClick(id) {
-    navigate("description/1");
-  }
-
-  function handleClick2() {
-    setShowPopup(true);  // Show the popup
-  }
-
-  function handleClick3() {
-    setShowSol(true);
+  function handleClick() {
+    navigate(`/description/${problem.id}`); // Go to detail page
   }
 
   return (
     <div className="bottom">
       <div className="statement">
-        <p onClick={handleClick}>• Problem-Statement</p>
+        <p onClick={handleClick}> {problem.title}</p>
         <div className="btn-bottom">
-          <button onClick={handleClick2}>Suggest</button>
-          <button onClick={handleClick3}>Project</button>
+          <button onClick={() => setShowPopup(true)}>Suggest</button>
+          <button onClick={() => setShowSol(true)}>Project</button>
         </div>
         {showPopup && <SuggestionPopup onClose={() => setShowPopup(false)} />}
         {showSol && <UploadPopup onClose={() => setShowSol(false)} />}

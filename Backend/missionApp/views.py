@@ -29,8 +29,9 @@ class ProjectViewSet(viewsets.ModelViewSet):
     # permission_classes = [permissions.IsAuthenticated]
 
 class VerifiedProblemListView(generics.ListAPIView):
-    queryset = VerifiedProblem.objects.all()
-    serializer_class = VerifiedProblemSerializer
+    queryset = RawProblem.objects.all()
+    serializer_class = RawProblemSerializer
+    #change this code....rawproblem added
     # permission_classes = [IsAuthenticated]
 
 
