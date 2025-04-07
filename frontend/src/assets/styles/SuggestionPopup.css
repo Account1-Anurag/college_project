@@ -27,6 +27,7 @@
   height: 20rem;
   margin: 0px;
   background-color: black;
+  resize: none;
 }
 
 .popup-buttons {
