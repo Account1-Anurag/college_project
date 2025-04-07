@@ -1,0 +1,32 @@
+# Python
+*.pyc
+__pycache__/
+
+# Django
+*.log
+*.pot
+*.pyc
+*.sqlite3
+db.sqlite3
+media/
+staticfiles/
+.env
+
+# VS Code
+.vscode/
+
+# Mac
+.DS_Store
+
+# Virtual environment
+venv/
+env/
+
+# Migrations (optional, only ignore if you’re sure)
+**/migrations/*.py
+!**/migrations/__init__.py
+
+# Node stuff (if using React frontend in same repo)
+node_modules/
+build/
+dist/
