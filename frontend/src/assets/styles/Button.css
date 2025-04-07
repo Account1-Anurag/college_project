@@ -1,0 +1,13 @@
+#btn{
+    display: flex;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(235, 8, 8);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    align-items: center;
+    cursor: pointer;
+    align-self: center;
+}

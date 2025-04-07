@@ -1,0 +1,151 @@
+/* Center the form beautifully */
+.div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  /* background: linear-gradient(to right, #e0eafc, #cfdef3); */
+  padding: 20px;
+  
+}
+
+/* Login Form Card */
+.login-form {
+  display: flex;
+  flex-direction: column;
+  /* background-color:rgba(12, 49, 137, 0.167);; */
+  background-color:rgba(210, 214, 223, 0.167);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 40px 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Heading */
+.login-form h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: rgb(235, 8, 8);
+  font-size: 26px;
+  font-weight: bold;
+  background:none;;
+
+}
+
+/* Labels */
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #2c3e50;
+  background:none;
+}
+
+/* Inputs */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+  background-color:rgba(210, 214, 223, 0.167);
+}
+
+input:focus,
+select:focus {
+  border-color: #3498db;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+  outline: none;
+}
+
+/* Button */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background: rgb(235, 8, 8);
+  color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  /* background-color:rgb(235, 8, 8); */
+  max-width: fit-content;
+  /* display: flex; */
+  align-self: center;
+  /* justify-content: center; */
+
+}
+
+button[type="submit"]:hover {
+  background: #2980b9;
+  transform: scale(1.03);
+}
+
+button[type="submit"]:active {
+  transform: scale(0.97);
+}
+
+/* Dropdowns (if needed later) */
+select {
+  background-color: rgba(255, 255, 255, 0.6);
+  color: #2c3e50;
+}
+/* Dropdowns (Branch, Year, etc.) */
+select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+  margin-bottom: 20px;
+  transition: 0.3s ease;
+  background-color: rgba(210, 214, 223, 0.16);
+    /* updated light translucent bg */
+  /* background-color: rgba(210, 214, 223, 0.3);   */
+  color: white; /* dark text for better readability */
+  appearance: none; /* remove native arrow styling (optional) */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20width%3D%2710%27%20height%3D%276%27%3E%3Cpath%20fill%3D%27%232c3e50%27%20d%3D%27M0%200l5%206%205-6z%27/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 10px 6px;
+}
+
+/* Focus effect for dropdowns */
+select:focus {
+  border-color: #3498db;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(52, 152, 219, 0.2);
+}
+
+
+.signup-text {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: white;
+  background: none;
+}
+
+.signup-link {
+  color: #e74c3c;
+  text-decoration: none;
+  font-weight: 600;
+  background: none;
+}
+
+.signup-link:hover {
+  text-decoration: underline;
+}

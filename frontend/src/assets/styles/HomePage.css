@@ -1,0 +1,27 @@
+.home{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.top{
+    /* background-color: yellow; */
+    display: flex;
+    margin: 1rem;
+    align-items: center;
+    justify-content: flex-end;
+    margin-right: 2rem;
+}
+
+.top button{
+    display: flex;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: rgb(235, 8, 8);
+    color: white;
+    border: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    align-items: center;
+    cursor: pointer;
+    
+}
